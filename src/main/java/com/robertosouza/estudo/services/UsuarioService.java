@@ -1,5 +1,7 @@
 package com.robertosouza.estudo.services;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,10 @@ public class UsuarioService {
 		
 		return usuarioRepository.save(usu);
 		
+	}
+	
+	public Collection<Usuario> busca() {
+		return usuarioRepository.findAll();
 	}
 	
 	public Usuario alterar(Usuario usu) {
