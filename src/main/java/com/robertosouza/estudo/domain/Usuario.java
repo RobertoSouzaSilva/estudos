@@ -16,6 +16,7 @@ public class Usuario implements Serializable{
 	private Integer id;
 	private String nome;
 	private String email;
+	private Integer senha;
 	private Integer telefone;
 	private Integer cpf;
 	
@@ -23,11 +24,12 @@ public class Usuario implements Serializable{
 		
 	}
 	
-	public Usuario(Integer id, String nome, String email, Integer telefone, Integer cpf) {
+	public Usuario(Integer id, String nome, String email, Integer telefone, Integer cpf, Integer senha) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
+		this.senha = senha;
 		this.telefone = telefone;
 		this.cpf = cpf;
 	}
@@ -61,6 +63,13 @@ public class Usuario implements Serializable{
 	public void setCpf(Integer cpf) {
 		this.cpf = cpf;
 	}
+	public Integer getSenha() {
+		return senha;
+	}
+
+	public void setSenha(Integer senha) {
+		this.senha = senha;
+	}
 
 	@Override
 	public int hashCode() {
@@ -86,4 +95,6 @@ public class Usuario implements Serializable{
 			return false;
 		return true;
 	}
+
+	
 }

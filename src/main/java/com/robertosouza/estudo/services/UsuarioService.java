@@ -3,6 +3,7 @@ package com.robertosouza.estudo.services;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
 import com.robertosouza.estudo.domain.Usuario;
@@ -15,9 +16,7 @@ public class UsuarioService {
 	private UsuarioRepository usuarioRepository;
 	
 	public Usuario cadastrar(Usuario usu) {
-		
 		return usuarioRepository.save(usu);
-		
 	}
 	
 	public Collection<Usuario> busca() {
@@ -27,5 +26,10 @@ public class UsuarioService {
 	public Usuario alterar(Usuario usu) {
 		return usuarioRepository.save(usu);
 	}
+	
+	public Usuario buscarPorEmail(String email) {
+		return usuarioRepository.buscarPorEmail(email);
+	}
+	
 
 }

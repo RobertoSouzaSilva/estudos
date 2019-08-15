@@ -16,7 +16,7 @@ import com.robertosouza.estudo.domain.Loja;
 import com.robertosouza.estudo.services.LojaService;
 
 @RestController
-@RequestMapping(value="/lojas")
+@RequestMapping(value="/admin/lojas")
 public class LojaResource {
 	
 	@Autowired
@@ -60,6 +60,7 @@ public class LojaResource {
 		}
 		lojaService.excluiLoja(lj);
 		return new ResponseEntity<>(HttpStatus.OK);
+		
 		
 		
 	}
